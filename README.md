@@ -54,31 +54,31 @@ check the node status
 ```bash
 kubectl get nodes
 ```
-##helm installing
+## helm installing
 
 ```bash
 curl -k https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
-##calico
+## calico
 
 ```bash
 curl https://docs.projectcalico.org/manifests/calico.yaml -O
 kubectl apply -f calico.yaml
 ```
 
-##metric
+## metric
 
 ```bash
 curl -k https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml -O
 kubectl apply -f components.yaml
 ```
-##nfs-subdir
+## nfs-subdir
 
 ```bash
 helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/ --insecure-skip-tls-verify
 ```
 
-##you can change nfs server and nfs path
+## you can change nfs server and nfs path
 
 ```bash
 helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
@@ -90,7 +90,7 @@ helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs
 ```
 
 
-##aplly yaml for jenkins
+## aplly yaml for jenkins
 
 ```bash
 kubectl apply -f jenkins-pvc.yaml
